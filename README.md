@@ -1,4 +1,4 @@
-# Community Freight
+# Pickup
 
 Independent Nigerian freight marketplace prototype.
 

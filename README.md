@@ -20,3 +20,6 @@ Customers propose a fare, compare simulated carrier acceptances and counter-offe
 
 
 Delivery check page: open `dist/check.html`. The sample reference `PK-1048` shows an illustrative tracking layout; carrier lookup and live GPS are not connected.
+
+
+Scheduled delivery demo: choose a future pickup date and time, then track it from the Scheduled deliveries tab. Booking data and carrier offers remain illustrative in this prototype.

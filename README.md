@@ -1,6 +1,6 @@
 # Community Freight
 
-Independent Nigerian freight marketplace prototype, built with HTML, CSS and JavaScript.
+Independent Nigerian freight marketplace prototype.
 
 ## Run locally
 
@@ -8,12 +8,8 @@ Independent Nigerian freight marketplace prototype, built with HTML, CSS and Jav
 python3 -m http.server 8000 --directory dist
 ```
 
-Open http://localhost:8000. Landing page: `dist/index.html`. Shipper dashboard: `dist/dashboard.html`.
+Open http://localhost:8000. Landing page: dist/index.html. Dashboard: dist/dashboard.html.
 
-## Prototype scope
+Booking, payments, KYC, matching and tracking are demos. No live services are connected. Demo records use browser storage.
 
-Booking quotes, carrier profiles, tracking and payments are demonstrations. No payments, KYC, messaging or live dispatch services are connected. Demo bookings and addresses use browser storage.
-
-## Images
-
-Vehicle photo sources are credited on the landing page (Cars.ng and Toyota media). Other imagery is AI-generated. Confirm image usage rights before a commercial launch.
+Vehicle photography is credited on the landing page (Cars.ng and Toyota). Other imagery is AI-generated. Review image usage rights before commercial launch.

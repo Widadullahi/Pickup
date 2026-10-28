@@ -17,3 +17,6 @@ Vehicle photography is credited on the landing page (Cars.ng and Toyota). Other 
 ## Fare negotiation
 
 Customers propose a fare, compare simulated carrier acceptances and counter-offers, send a counter, and review the agreed total before saving a demo booking. Carrier responses and the included 10% fee are illustrative. Live negotiation, messaging and payments are not connected.
+
+
+Delivery check page: open `dist/check.html`. The sample reference `PK-1048` shows an illustrative tracking layout; carrier lookup and live GPS are not connected.

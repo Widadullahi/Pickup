@@ -1,0 +1,14 @@
+{
+  "name": "pickup-ng",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent Nigerian freight marketplace prototype",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.47.0"
+  }
+}

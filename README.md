@@ -10,6 +10,25 @@ python3 -m http.server 8000 --directory dist
 
 Open http://localhost:8000. Landing page: dist/index.html. Dashboard: dist/dashboard.html.
 
+For a Cloudflare-compatible preview:
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy to Cloudflare Workers
+
+The site is configured as a Cloudflare Worker with Static Assets. Wrangler publishes the contents of `dist/`, applies the security and cache rules in `dist/_headers`, and serves `dist/404.html` for missing routes.
+
+```bash
+npm install
+npx wrangler login
+npm run deploy
+```
+
+The first deployment creates the `pickup-ng` Worker and returns its `workers.dev` URL. Add a custom domain later from Cloudflare Dashboard → Workers & Pages → pickup-ng → Settings → Domains & Routes.
+
 Booking, payments, KYC, matching and tracking are demos. No live services are connected. Demo records use browser storage.
 
 Vehicle photography is credited on the landing page (Cars.ng and Toyota). Other imagery is AI-generated. Review image usage rights before commercial launch.

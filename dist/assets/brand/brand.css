@@ -1,0 +1,44 @@
+.brand--art {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.brand--art img {
+  display: block;
+  width: 148px;
+  height: auto;
+  max-width: none;
+}
+
+.sitefooter .brand--art img,
+footer .brand--art img {
+  width: 124px;
+}
+
+aside .brand--art img {
+  width: 156px;
+}
+
+.mobile-brand.brand--art img {
+  width: 108px;
+}
+
+@media (max-width: 800px) and (min-width: 521px) {
+  aside .brand--art {
+    width: 44px;
+    height: 46px;
+  }
+
+  aside .brand--art img {
+    width: 138px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav > .brand--art img,
+  .top .brand--art img {
+    width: 122px;
+  }
+}

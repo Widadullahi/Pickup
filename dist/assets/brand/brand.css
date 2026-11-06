@@ -173,3 +173,235 @@ aside .brand--art {
     display: flex;
   }
 }
+
+/* Fluid layout: fill every viewport while keeping useful edge gutters. */
+:root {
+  --page-gutter: clamp(18px, 4vw, 72px);
+}
+
+body#top nav,
+body#top .wrap,
+body#top .fare-inner,
+body#top .schedule-inner,
+body#top .loads-inner,
+body#top .footerinner {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+body#top .wrap {
+  overflow: clip;
+}
+
+body#top .flowsticky,
+body#top .quote {
+  width: 100%;
+  max-width: none;
+}
+
+body#top .hero,
+body#top .inspiredhero {
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr);
+}
+
+body#top .vehicles {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body#top .fare-flow,
+body#top .load-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body#top .schedule-inner {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr);
+}
+
+body#top .trustinner,
+body#top .faq {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+body#top .carrierbanner {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr);
+}
+
+.pickup-dashboard .content,
+.pickup-dashboard header {
+  width: 100%;
+  max-width: none;
+  padding-left: clamp(18px, 3.5vw, 64px);
+  padding-right: clamp(18px, 3.5vw, 64px);
+}
+
+.pickup-dashboard .hero,
+.pickup-dashboard .stats,
+.pickup-dashboard .cols,
+.pickup-dashboard .carriergrid,
+.pickup-dashboard .tablewrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.pickup-dashboard .stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pickup-dashboard .cols {
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+}
+
+.pickup-check .top,
+.pickup-check .page {
+  width: 100%;
+  max-width: none;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+.pickup-check .intro,
+.pickup-check .lookup,
+.pickup-check .notice,
+.pickup-check .result,
+.pickup-check .notfound {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 1050px) {
+  body#top .navlinks {
+    display: none;
+  }
+
+  body#top .hero,
+  body#top .inspiredhero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  body#top .vehicles,
+  body#top .fare-flow,
+  body#top .load-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body#top .fare-card:last-child,
+  body#top .load-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  body#top .flowstage {
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  }
+
+  body#top .schedule-inner {
+    gap: 38px;
+  }
+
+  .pickup-dashboard .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pickup-dashboard .cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --page-gutter: clamp(16px, 5vw, 24px);
+  }
+
+  body#top .hero,
+  body#top .inspiredhero,
+  body#top .schedule-inner,
+  body#top .trustinner,
+  body#top .faq,
+  body#top .carrierbanner,
+  body#top .flowstage {
+    grid-template-columns: 1fr;
+  }
+
+  body#top .fare-flow,
+  body#top .load-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body#top .fare-card:last-child,
+  body#top .load-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .pickup-dashboard .content,
+  .pickup-dashboard header,
+  .pickup-check .top,
+  .pickup-check .page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .pickup-dashboard .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .pickup-dashboard .panel {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body#top .vehicles {
+    grid-template-columns: 1fr;
+  }
+
+  body#top .hero .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body#top .hero .actions .btn {
+    width: 100%;
+  }
+
+  body#top .hero-promises {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  body#top .hero-promises > span {
+    border-right: 0;
+    border-bottom: 1px solid #45644e;
+    padding: 0 0 12px;
+  }
+
+  body#top .quote label {
+    min-width: 100%;
+  }
+
+  body#top .schedule-dates {
+    grid-template-columns: 1fr;
+  }
+
+  body#top .schedule-slot {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  body#top .footerlinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 16px;
+  }
+
+  body#top .fleetavailable {
+    display: none;
+  }
+}

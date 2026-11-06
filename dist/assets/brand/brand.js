@@ -1,4 +1,13 @@
 (() => {
+  const page = location.pathname.split("/").pop() || "index.html";
+  document.body.classList.add(
+    page === "dashboard.html"
+      ? "pickup-dashboard"
+      : page === "check.html"
+        ? "pickup-check"
+        : "pickup-landing",
+  );
+
   const logoPath = "assets/brand/pickup-logo-concept-v1.png";
   const stylesheet = document.createElement("link");
   stylesheet.rel = "stylesheet";

@@ -12,6 +12,97 @@
   max-width: none;
 }
 
+body#top nav > .brand--art {
+  padding: 0;
+  position: relative;
+}
+
+body#top nav > .brand--art img {
+  filter: none;
+}
+
+body#top nav > .brand--art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url("pickup-logo-concept-v1.png") left center / 100% auto no-repeat;
+  filter: brightness(0) invert(1);
+  clip-path: inset(0 0 0 31.5%);
+}
+
+body#top nav {
+  gap: 22px;
+}
+
+body#top nav .navlinks {
+  align-items: center;
+  gap: 26px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+body#top nav .navlinks a,
+body#top nav .navend > a:first-child {
+  position: relative;
+  padding: 10px 0;
+  color: rgba(255, 255, 255, .86);
+  line-height: 1;
+  white-space: nowrap;
+  transition: color .18s ease;
+}
+
+body#top nav .navlinks a::after,
+body#top nav .navend > a:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #dbf591;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .18s ease;
+}
+
+body#top nav .navlinks a:hover,
+body#top nav .navend > a:first-child:hover {
+  color: #fff;
+}
+
+body#top nav .navlinks a:hover::after,
+body#top nav .navend > a:first-child:hover::after {
+  transform: scaleX(1);
+}
+
+body#top nav .navend {
+  gap: 16px;
+  font-size: 12px;
+}
+
+body#top nav .navend .btn {
+  min-height: 52px;
+  padding: 13px 18px;
+  gap: 12px;
+  border-radius: 10px;
+  background: #dbf591;
+  color: #164d3c;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(4, 27, 20, .16);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+body#top nav .navend .btn:hover {
+  transform: translateY(-2px);
+  background: #e5f8aa;
+  box-shadow: 0 12px 28px rgba(4, 27, 20, .22);
+}
+
 .sitefooter .brand--art img,
 footer .brand--art img {
   width: 124px;
@@ -21,8 +112,16 @@ aside .brand--art img {
   width: 156px;
 }
 
+.mobile-brand.brand--art {
+  display: none;
+}
+
 .mobile-brand.brand--art img {
   width: 108px;
+}
+
+aside .brand--art {
+  height: 52px;
 }
 
 @media (max-width: 800px) and (min-width: 521px) {
@@ -36,9 +135,41 @@ aside .brand--art img {
   }
 }
 
+@media (max-width: 1100px) and (min-width: 681px) {
+  body#top nav {
+    gap: 18px;
+  }
+
+  body#top nav > .brand--art img {
+    width: 135px;
+  }
+
+  body#top nav .navlinks {
+    gap: 18px;
+    font-size: 11px;
+  }
+
+  body#top nav .navend {
+    gap: 13px;
+    font-size: 11px;
+  }
+
+  body#top nav .navend .btn {
+    min-height: 48px;
+    padding: 12px 15px;
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 600px) {
   nav > .brand--art img,
   .top .brand--art img {
     width: 122px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mobile-brand.brand--art {
+    display: flex;
   }
 }
